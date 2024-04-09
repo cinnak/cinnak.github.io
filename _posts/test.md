@@ -1,0 +1,5 @@
+---
+title: test
+date: 2024-04-09
+permalink: /posts/test.html
+---
