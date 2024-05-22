@@ -10,7 +10,9 @@ category: CISSP
 - developed by ISO
 - mnemonics for OSI layers
 	- 1-7: Please Do Not Throw Sausage Pizza Away
+		- Decapsulation ---> De-packaging : Unwinding the message as it **goes up** to the layers of OSI Model.
 	- 7-1: All People Seem To Need Data Processing
+		- Encapsulation ---> Packaging : When the payload (message) has the headers and footers added as the message **goes down to layers** in OSI model.
 - OSI layers overview
 
 | layer          | protocols/standards     | devices                                | data format                        |
@@ -22,8 +24,10 @@ category: CISSP
 | 3 Network      | IP, ICMP, IGMP          | router                                 | **P**ackets/datagrams              |
 | 2 Data link    | IEEE 802.3, IEEE 802.11 | switch, bridge                         | **F**rames                         |
 | 1 Physical     | Signaling standards     | hub, cable                             | **B**its                           |
-	- mnemonics for data format
-		- Some People Forget Birthday
+
+
+- mnemonics for data format
+	- Some People Forget Birthday
 ### 4.1.2 Internet Protocol (IP) version 4 and 6 (IPv6) 
 (e.g., unicast, broadcast, multicast, anycast)
 ### 4.1.3 Secure protocols 
