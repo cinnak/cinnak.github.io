@@ -26,9 +26,9 @@ category: CISSP
 | 1 Physical     | Signaling standards     | hub, cable                             | **B**its                           |
 
 
-- mnemonics for data format
-	- Some People Forget Birthday
-### 4.1.2 Internet Protocol (IP) version 4 and 6 (IPv6) 
+- mnemonics for data format: Some People Forget Birthday
+
+### 4.1.2 IPv4 and IPv6
 (e.g., unicast, broadcast, multicast, anycast)
 ### 4.1.3 Secure protocols 
 e.g., 
