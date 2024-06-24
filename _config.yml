@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: Cinnak
-description: Writing and sharing about data science, AI, cybersecurity, and enjoying some great craft beers🍺🍻. Join me for some tech talk and beer chats!
+description: Writing and sharing about data science, AI, cybersecurity, and enjoying some craft beers🍺🍻. Join me for some tech talk and beer chats!
 markdown: kramdown
 kramdown:
   input: GFM
