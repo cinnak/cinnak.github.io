@@ -4,3 +4,7 @@ description: Writing and sharing about data science, AI, cybersecurity, and enjo
 markdown: kramdown
 kramdown:
   input: GFM
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
