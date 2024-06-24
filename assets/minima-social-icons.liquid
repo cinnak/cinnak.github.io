@@ -1,4 +1,6 @@
-
+{% unless include.content == 'permalink: /assets/minima-social-icons.svg' %}
+    <!-- Your existing SVG rendering code here -->
+{% endunless %}
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 {% comment %}
   Iterate through {{ site.minima.social_links }} and render platform related SVG-symbol
