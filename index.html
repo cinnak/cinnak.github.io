@@ -2,23 +2,22 @@
 layout: default
 title: Home
 ---
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <!-- Embedding the Course.im script -->
-    <script type="text/javascript">
-    var courseim_ID="591eb-bb08a";
-    (function(){
-        var d=document;
-        var s=d.createElement("script");
-        s.src="https://learn.course.im/app.js";
-        s.async=1;
-        s.setAttribute("crossorigin","*");
-        d.getElementsByTagName("head")[0].appendChild(s);
-    })();
-    </script>
+    <!-- Styles for the card view -->
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
     <div class="home">
@@ -33,6 +32,22 @@ title: Home
             </li>
         {% endfor %}
         </ul>
+
+        <!-- Card view section -->
+        <div class="card">
+            <div id="course-im"></div>
+            <script type="text/javascript">
+                var courseim_ID="591eb-bb08a";
+                (function(){
+                    var d=document;
+                    var s=d.createElement("script");
+                    s.src="https://learn.course.im/app.js";
+                    s.async=1;
+                    s.setAttribute("crossorigin","*");
+                    d.getElementById("course-im").appendChild(s);
+                })();
+            </script>
+        </div>
     </div>
 </body>
 </html>
