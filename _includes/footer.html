@@ -1,18 +1,37 @@
----
-permalink: /assets/minima-social-icons.svg
----
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-{% comment %}
-  Iterate through {{ site.minima.social_links }} and render platform related SVG-symbol
-  unless the platform is "rss" because we need the "rss" symbol for the `Subscribe` link
-  in the footer and therefore inject the "rss" icon outside the iteration loop.
-{% endcomment %}
-{% for entry in site.minima.social_links %}
-  {%- assign symbol_id = entry.platform -%}
-  {%- unless symbol_id == "rss" -%}
-    {%- include svg_symbol.html key = symbol_id -%}
-  {% endunless %}
-{%- endfor -%}
-  {%- include svg_symbol.html key = "rss" -%}
-</svg>
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+            <svg class="svg-icon orange">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      {%- if site.author %}
+        <ul class="contact-list">
+          {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+          {% if site.author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+        </ul>
+      {%- endif %}
+      </div>
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
+      </div>
+    </div>
+
+    <div class="social-links">
+      {%- include social.html -%}
+    </div>
+
+  </div>
+
+</footer>
