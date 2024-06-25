@@ -40,13 +40,25 @@ title: Home
     </div>
 
     <!-- CISSP Course button -->
-    <button class="cissp-button" onclick="redirectToCourse()">CISSP Course</button>
+    <button class="action-button cissp-button" onclick="redirectToCourse()">CISSP Course</button>
+    <button class="action-button now-reading-button" onclick="redirectToNowReading()">Now Reading</button>
+    <button class="action-button now-drinking-button" onclick="redirectToNowDrinking()">Now Drinking</button>
+
 
     <!-- JavaScript for redirecting to course page -->
     <script>
-        function redirectToCourse() {
-            window.location.href = "{{ site.baseurl }}/cissp-course";
+       function redirectToCourse() {
+            window.location.href = "{{ site.baseurl }}/cissp-course.html";  // Adjust path as needed
         }
+
+        function redirectToNowReading() {
+            window.location.href = "{{ site.baseurl }}/now-reading.html";  // Adjust path as needed
+        }
+
+        function redirectToNowDrinking() {
+            window.location.href = "{{ site.baseurl }}/now-drinking.html";  // Adjust path as needed
+        }
+
     </script>
 </body>
 </html>
