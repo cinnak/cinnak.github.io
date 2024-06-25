@@ -8,14 +8,33 @@ title: Home
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <!-- Styles for the card view -->
+    <!-- Styles for positioning -->
     <style>
-        .card {
+        .embedded-content {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 4px;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .embedded-content .toggle-button {
+            cursor: pointer;
+            text-align: center;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+        }
+        .embedded-content .content {
+            display: none;
+            margin-top: 10px;
+        }
+        .embedded-content.show .content {
+            display: block;
         }
     </style>
 </head>
@@ -32,22 +51,37 @@ title: Home
             </li>
         {% endfor %}
         </ul>
+    </div>
 
-        <!-- Card view section -->
-        <div class="card">
-            <div id="course-im"></div>
-            <script type="text/javascript">
-                var courseim_ID="591eb-bb08a";
-                (function(){
-                    var d=document;
-                    var s=d.createElement("script");
-                    s.src="https://learn.course.im/app.js";
-                    s.async=1;
-                    s.setAttribute("crossorigin","*");
-                    d.getElementById("course-im").appendChild(s);
-                })();
-            </script>
+    <!-- Embedded content section -->
+    <div class="embedded-content">
+        <div id="course-im">
+            <!-- Initial content -->
+            <div class="content">
+                <!-- Embedded script -->
+                <script type="text/javascript">
+                    var courseim_ID="591eb-bb08a";
+                    (function(){
+                        var d=document;
+                        var s=d.createElement("script");
+                        s.src="https://learn.course.im/app.js";
+                        s.async=1;
+                        s.setAttribute("crossorigin","*");
+                        d.getElementById("course-im").appendChild(s);
+                    })();
+                </script>
+            </div>
+            <!-- Toggle button for full content -->
+            <div class="toggle-button" onclick="toggleContent()">Click for Full Content</div>
         </div>
     </div>
+
+    <!-- JavaScript for toggling content -->
+    <script>
+        function toggleContent() {
+            var element = document.querySelector('.embedded-content');
+            element.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
