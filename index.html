@@ -2,7 +2,6 @@
 layout: default
 title: Home
 ---
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +9,8 @@ title: Home
     <title>{{ page.title }}</title>
     <!-- Styles for positioning -->
     <style>
-        .cissp-button {
+        .action-button {
             position: fixed;
-            top: 20px;
-            right: 20px;
             z-index: 1000;
             background-color: #007bff;
             color: #fff;
@@ -21,6 +18,21 @@ title: Home
             border: none;
             border-radius: 4px;
             cursor: pointer;
+        }
+
+        .cissp-button {
+            top: 20px;
+            right: 280px;
+        }
+
+        .now-reading-button {
+            top: 20px;
+            right: 150px;
+        }
+
+        .now-drinking-button {
+            top: 20px;
+            right: 20px;
         }
     </style>
 </head>
@@ -39,15 +51,14 @@ title: Home
         </ul>
     </div>
 
-    <!-- CISSP Course button -->
+    <!-- Action buttons -->
     <button class="action-button cissp-button" onclick="redirectToCourse()">CISSP Course</button>
     <button class="action-button now-reading-button" onclick="redirectToNowReading()">Now Reading</button>
     <button class="action-button now-drinking-button" onclick="redirectToNowDrinking()">Now Drinking</button>
 
-
-    <!-- JavaScript for redirecting to course page -->
+    <!-- JavaScript for redirection -->
     <script>
-       function redirectToCourse() {
+        function redirectToCourse() {
             window.location.href = "{{ site.baseurl }}/cissp-course.html";  // Adjust path as needed
         }
 
@@ -58,7 +69,6 @@ title: Home
         function redirectToNowDrinking() {
             window.location.href = "{{ site.baseurl }}/now-drinking.html";  // Adjust path as needed
         }
-
     </script>
 </body>
 </html>
