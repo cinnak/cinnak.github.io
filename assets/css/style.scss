@@ -5,3 +5,29 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+.action-button {
+    position: fixed;
+    z-index: 1000;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cissp-button {
+    top: 20px;
+    right: 20px;
+}
+
+.now-reading-button {
+    top: 20px;
+    right: 150px; /* Adjust based on your design */
+}
+
+.now-drinking-button {
+    top: 20px;
+    right: 280px; /* Adjust based on your design */
+}
