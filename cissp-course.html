@@ -28,7 +28,7 @@ title: CISSP Course
     #course-container {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 90%; /* Set container width to 90% of screen */
       min-height: 100vh; /* Ensure container fills viewport height */
     }
     
@@ -43,11 +43,13 @@ title: CISSP Course
     #course-im > div:first-child {
       background-color: #f4f4f4;
       padding: 10px;
-      flex-basis: 20%; /* Set minimum width for sidebar */
+      flex-basis: 25%; /* Set minimum width for sidebar */
+      max-width: 30%; /* Set maximum width for sidebar */
     }
     
     /* Main content styles */
     #course-im > div:last-child {
       padding: 10px;
+      flex-grow: 1; /* Allow main content to grow and fill available space */
     }
 </style>
