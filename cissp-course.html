@@ -1,69 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CISSP Course</title>
-  <style>
-    /* General styles */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-    }
+---
+layout: default
+title: CISSP Course
+---
+<div id="course-im"></div>
 
-    /* Container styles */
-    #course-container {
-      display: flex;
-      flex-direction: column;
-      width: 90%; /* Set container width to 90% of screen */
-      min-height: 100vh; /* Ensure container fills viewport height */
-      position: relative; /* Make container relative for positioning */
-    }
+<script type="text/javascript">
+  var courseim_ID="591eb-bb08a";
+  (function(){
+    var d=document;
+    var s=d.createElement("script");
+    s.src="https://learn.course.im/app.js";
+    s.async=1;
+    s.setAttribute("crossorigin","*");
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+</script>
 
-    /* Child element styles */
-    #course-container > div {
-      box-sizing: border-box;
-      flex-grow: 1; /* Allow child elements to grow */
-      display: flex; /* Enable flexbox for child elements */
-      position: absolute; /* Make child elements absolute */
-      top: 0;
-      left: 0;
-      width: 100%; /* Set child elements to full width */
-    }
-
-    /* Sidebar styles */
-    #course-im > div:first-child {
-      background-color: #f4f4f4;
-      padding: 10px;
-      flex-basis: 25%; /* Set minimum width for sidebar */
-      max-width: 30%; /* Set maximum width for sidebar */
-      z-index: 1; /* Place sidebar on top */
-    }
-
-    /* Main content styles */
-    #course-im > div:last-child {
-      padding: 10px;
-      flex-grow: 1; /* Allow main content to grow and fill available space */
-      z-index: 0; /* Place main content behind sidebar */
-    }
-  </style>
-</head>
-<body>
-  <div id="course-container">
-    <div id="course-im"></div>
-  </div>
-
-  <script type="text/javascript">
-    var courseim_ID="591eb-bb08a";
-    (function(){
-      var d=document;
-      var s=d.createElement("script");
-      s.src="https://learn.course.im/app.js";
-      s.async=1;
-      s.setAttribute("crossorigin","*");
-      d.getElementsByTagName("head")[0].appendChild(s);
-    })();
-  </script>
-</body>
-</html>
+<style>
+  #course-container {
+    display: flex;
+  }
+  #course-container > div {
+    box-sizing: border-box;
+  }
+  #course-im > div:first-child {
+    width: 10%;
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+  #course-im > div:last-child {
+    width: 80%;
+    padding: 10px;
+  }
+</style>
