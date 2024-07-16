@@ -4,6 +4,7 @@ title: domain 4
 permalink: /posts/domain4
 tags: CISSP
 ---
+[TOC]
 ## 4.1 Apply secure design principles in network architectures 
 ### 4.1.1 Open System Interconnection (OSI) and Transmission Control Protocol/Internet Protocol (TCP/IP) models
 #### 4.1.1.1 OSI model
