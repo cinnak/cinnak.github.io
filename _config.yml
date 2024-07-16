@@ -4,7 +4,7 @@ description: Writing and sharing about data science, AI, cybersecurity, and enjo
 markdown: kramdown
 kramdown:
   input: GFM
-
+show_tags: true
 #remote_theme: jekyll/minima
 theme: minima
 plugins:
