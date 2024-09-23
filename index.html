@@ -20,7 +20,7 @@ title: Home
             cursor: pointer;
         }
 
-        .cissp-button {
+        .now-learning-button {
             top: 20px;
             right: 280px;
         }
@@ -52,14 +52,14 @@ title: Home
     </div>
 
     <!-- Action buttons -->
-    <button class="action-button cissp-button" onclick="redirectToCourse()">CISSP Course</button>
+    <button class="action-button now-learning-button" onclick="redirectToCourse()">CISSP Course</button>
     <button class="action-button now-reading-button" onclick="redirectToNowReading()">Now Reading</button>
     <button class="action-button now-drinking-button" onclick="redirectToNowDrinking()">Now Drinking</button>
 
     <!-- JavaScript for redirection -->
     <script>
         function redirectToCourse() {
-            window.location.href = "{{ site.baseurl }}/cissp-course.html";  // Adjust path as needed
+            window.location.href = "{{ site.baseurl }}/now-learning.html";  // Adjust path as needed
         }
 
         function redirectToNowReading() {
