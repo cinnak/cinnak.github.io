@@ -23,11 +23,11 @@ My goal was to integrate CISSP prep into my daily routine, even if it was just f
 
 - [Destination Certification’s mindmap videos](https://www.youtube.com/watch?v=hf5NwUSEkwA&list=PLZKdGEfEyJhLd-pJhAD7dNbJyUgpqI4pu) were a fantastic resource, especially for visual learners.
 
-- 50 CISSP Questions and CISSP Testing Tips Secrets All Students Should Know by Andrew Ramdayal provided great insights into exam strategies.
+- [50 CISSP Questions and CISSP Testing Tips Secrets All Students Should Know](https://www.youtube.com/watch?v=qbVY0Cg8Ntw) by Andrew Ramdayal provided great insights into exam strategies.
 
-- CISSP Exam Cram 2024 Addendum by Inside Cloud and Security – Useful for understanding the latest updates and tips.
+- [CISSP Exam Cram 2024 Addendum by Inside Cloud and Security](https://www.youtube.com/watch?v=XZr2wLKdoVc&t=7016s) – Useful for understanding the latest updates and tips.
 
-- CISSP 2024 Exam Changes in DETAIL! by Destination Certification – Essential for staying updated on the newest changes.
+- [CISSP 2024 Exam Changes in DETAIL! by Destination Certification](https://www.youtube.com/watch?v=TGWpwtTPexE&t=25s) – Essential for staying updated on the newest changes.
 
 ### Practice Questions:
 
