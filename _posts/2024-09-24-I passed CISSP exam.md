@@ -21,7 +21,7 @@ My goal was to integrate CISSP prep into my daily routine, even if it was just f
 
 ### Videos:
 
-- Destination Certification’s mindmap videos were a fantastic resource, especially for visual learners.
+- [Destination Certification’s mindmap videos](https://www.youtube.com/watch?v=hf5NwUSEkwA&list=PLZKdGEfEyJhLd-pJhAD7dNbJyUgpqI4pu) were a fantastic resource, especially for visual learners.
 
 - 50 CISSP Questions and CISSP Testing Tips Secrets All Students Should Know by Andrew Ramdayal provided great insights into exam strategies.
 
@@ -58,17 +58,17 @@ I’m just sharing my experience, not recommending this approach. Taking 29 prac
 
 Here’s the list of exams I completed:
 
-    - OSG V9: 4 sets of practice exams
+- OSG V9: 4 sets of practice exams
 
-    - OSG V10: 4 sets of practice exams
+- OSG V10: 4 sets of practice exams
 
-    - Official Practice Tests V3: 4 sets of practice exams
+- Official Practice Tests V3: 4 sets of practice exams
 
-    - Official Practice Tests V4: 4 sets of practice exams
+- Official Practice Tests V4: 4 sets of practice exams
 
-    - isc2 learnZapp: 8 sets of practice exams
+- isc2 learnZapp: 8 sets of practice exams
 
-    - CertPreps: 5 sets of practice exams
+- CertPreps: 5 sets of practice exams
 
 How much study time did I spend between practice exams?
 
