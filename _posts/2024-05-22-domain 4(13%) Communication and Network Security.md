@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: domain 4
 permalink: /posts/domain4
 tags: CISSP
@@ -99,13 +99,3 @@ e.g., network administrative functions
 e.g., backhaul networks, satellite
 ### 4.3.4 Third-party connectivity 
 e.g., telecom providers, hardware support
-
-
-
-
-
-
-
-
-
-
