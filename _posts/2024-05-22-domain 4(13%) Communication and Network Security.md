@@ -100,3 +100,4 @@ e.g., backhaul networks, satellite
 ### 4.3.4 Third-party connectivity 
 e.g., telecom providers, hardware support
 
+
