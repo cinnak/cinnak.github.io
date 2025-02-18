@@ -24,14 +24,13 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
-          <div class="theme-switch-wrapper">
-            <select id="theme-switch" class="theme-switch">
-              <option value="classic">Classic</option>
+          <div class="theme-switcher">
+            <select id="theme-switcher">
+              <option value="light">Light</option>
               <option value="dark">Dark</option>
-              <option value="solarized">Solarized</option>
-              <option value="solarized-dark">Solarized Dark</option>
             </select>
           </div>
+          {% include back-to-top.html %}
         </div>
       </nav>
     {%- endif -%}

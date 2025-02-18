@@ -8,36 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
         currentTheme = theme;
     }
 
-    function createThemeSwitcher() {
-        const nav = document.querySelector('.site-nav');
-        if (!nav) return;
+    const themeSelect = document.querySelector('#theme-switch');
+    if (themeSelect) {
+        // 设置当前主题为选中项
+        const currentOption = themeSelect.querySelector(`option[value="${currentTheme}"]`);
+        if (currentOption) {
+            currentOption.selected = true;
+        }
 
-        const themeContainer = document.createElement('div');
-        themeContainer.className = 'theme-switcher';
-
-        const select = document.createElement('select');
-        select.id = 'theme-select';
-        select.title = '选择主题';
-
-        themes.forEach(theme => {
-            const option = document.createElement('option');
-            option.value = theme;
-            option.text = theme.charAt(0).toUpperCase() + theme.slice(1).replace('-', ' ');
-            if (theme === currentTheme) {
-                option.selected = true;
-            }
-            select.appendChild(option);
-        });
-
-        select.addEventListener('change', (e) => {
+        // 添加主题切换事件监听
+        themeSelect.addEventListener('change', (e) => {
             setTheme(e.target.value);
         });
-
-        themeContainer.appendChild(select);
-        nav.appendChild(themeContainer);
     }
 
     // 初始化主题
     setTheme(currentTheme);
-    createThemeSwitcher();
-});
+})
