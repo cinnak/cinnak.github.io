@@ -14,17 +14,17 @@
 }
 
 .post-tags a {
-    background-color: var(--background-color);
+    background-color: var(--minima-background-color);
     padding: 4px 8px;
     margin-right: 5px;
     border-radius: 3px;
-    color: var(--text-color);
+    color: var(--minima-text-color);
     text-decoration: none;
-    border: 1px solid var(--border-color-01);
+    border: 1px solid var(--minima-border-color-01);
     transition: background-color 0.2s;
 }
 
 .post-tags a:hover {
-    background-color: var(--brand-color-light);
-    color: var(--brand-color);
+    background-color: var(--minima-brand-color-light);
+    color: var(--minima-brand-color);
 }
