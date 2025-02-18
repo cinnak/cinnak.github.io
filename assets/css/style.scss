@@ -1,9 +1,9 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
+/*
+ * Main stylesheet
+ */
 
 @import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/skins/themes",
   "minima/initialize";
 
 .action-button {
@@ -48,5 +48,5 @@
 }
 
 .post-tags a:hover {
-    background-color: #e1e1e1;
+    background-color: #e0e0e0;
 }

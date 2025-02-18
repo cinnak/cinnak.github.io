@@ -30,7 +30,41 @@
         &:hover {
           color: var(--brand-color);
         }
+.post-header-tags {
+  margin-bottom: 15px;
+  .post-header-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-right: 5px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color-01);
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: var(--text-color);
+  }
+}
 
+.post-footer-tags {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color-01);
+  
+  .post-footer-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    margin-right: 8px;
+    background-color: var(--brand-color);
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: darken(var(--brand-color), 10%);
+    }
+  }
+}
         &.active {
           color: var(--brand-color);
           font-weight: bold;

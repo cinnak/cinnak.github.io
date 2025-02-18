@@ -12,9 +12,9 @@ layout: base
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     {% if page.tags %}
-    <div class="post-tags">
+    <div class="post-header-tags">
       {% for tag in page.tags %}
-        <span class="post-tag">{{ tag }}</span>
+        <span class="post-header-tag">{{ tag }}</span>
       {% endfor %}
     </div>
     {% endif %}
@@ -43,88 +43,19 @@ layout: base
     {{ content }}
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const content = document.getElementById('post-content');
-      const toc = document.getElementById('table-of-contents');
-      
-      if (!content || !toc) {
-        console.warn('Required elements not found');
-        return;
-      }
-      
-      const headings = Array.from(content.querySelectorAll('h2, h3, h4, h5, h6'));
-      if (headings.length === 0) {
-        console.info('No headings found in content');
-        return;
-      }
-
-      // 清空现有目录内容
-      toc.innerHTML = '';
-
-      headings.forEach((heading, index) => {
-        // 生成唯一ID
-        const id = heading.id || `heading-${index}`;
-        heading.id = id;
-        
-        // 获取标题层级和文本
-        const level = parseInt(heading.tagName.charAt(1));
-        const text = heading.textContent.trim();
-
-        // 创建目录项
-        const link = document.createElement('a');
-        link.href = `#${id}`;
-        link.textContent = text;
-        link.classList.add(`toc-level-${level}`);
-
-        const div = document.createElement('div');
-        div.appendChild(link);
-        toc.appendChild(div);
-      });
-
-      // 使用Intersection Observer API监听标题元素的可见性
-      const observerOptions = {
-        root: null,
-        rootMargin: '-5% 0px -95% 0px',
-        threshold: 0
-      };
-
-      let currentActive = null;
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          const id = entry.target.id;
-          const tocLink = toc.querySelector(`a[href="#${id}"]`);
-          
-          if (entry.isIntersecting) {
-            // 移除之前的active类
-            if (currentActive && currentActive !== tocLink) {
-              currentActive.classList.remove('active');
-            }
-            // 添加active类到当前项
-            if (tocLink) {
-              tocLink.classList.add('active');
-              currentActive = tocLink;
-            }
-          }
-        });
-      }, observerOptions);
-
-      headings.forEach(heading => observer.observe(heading));
-    });
-  </script>
-
+  <script src="{{ "/assets/js/toc.js" | relative_url }}"></script>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
 {%- if page.tags -%}
-  <div class="post-tags">
+  <div class="post-footer-tags">
     <p><strong>标签:</strong>
     {% if page.tags.first %}
       {% for tag in page.tags %}
-        <a href="{{ site.baseurl }}/tags#{{ tag | slugify }}">#{{ tag }}</a>
+        <a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="post-footer-tag">#{{ tag }}</a>
       {% endfor %}
     {% else %}
-      <a href="{{ site.baseurl }}/tags#{{ page.tags | slugify }}">#{{ page.tags }}</a>
+      <a href="{{ site.baseurl }}/tags#{{ page.tags | slugify }}" class="post-footer-tag">#{{ page.tags }}</a>
     {% endif %}
     </p>
   </div>
