@@ -116,8 +116,6 @@
     }
   }
   
-  
-  
   /**
    * Site footer
    */
@@ -195,8 +193,6 @@
     }
   }
   
-  
-  
   /**
    * Page content
    */
@@ -231,8 +227,6 @@
     display: block;
     @include relative-font-size(1.5);
   }
-  
-  
   
   /**
    * Posts
@@ -285,7 +279,6 @@
     }
   }
   
-  
   .social-media-list {
     display: table;
     margin: 0 auto;
@@ -301,8 +294,6 @@
       }
     }
   }
-  
-  
   
   /**
    * Pagination navbar
@@ -329,8 +320,6 @@
     }
   }
   
-  
-  
   /**
    * Grid helpers
    */
@@ -339,3 +328,24 @@
       width: calc(50% - (#{$spacing-unit} / 2));
     }
   }
+/**
+ * Post tags
+ */
+.post-tags {
+  margin: 8px 0;
+  
+  .post-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-right: 8px;
+    background-color: $border-color-01;
+    color: $text-color;
+    border-radius: 3px;
+    font-size: 14px;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: darken($border-color-01, 10%);
+    }
+  }
+}
