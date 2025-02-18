@@ -1,73 +1,75 @@
 // Light theme
 [data-theme="light"] {
-    --background-color: #ffffff;
-    --text-color: #333333;
-    --link-color: #2a7ae2;
-    --border-color: #e8e8e8;
-    --code-background: #f8f8f8;
-    --brand-color: #2a7ae2;
-    --site-title-color: #333333;
-    --site-nav-link-color: #111111;
+    --minima-background-color: #ffffff;
+    --minima-text-color: #333333;
+    --minima-link-base-color: #2a7ae2;
+    --minima-border-color-01: #e8e8e8;
+    --minima-code-background-color: #f8f8f8;
+    --minima-brand-color: #2a7ae2;
+    --minima-brand-color-light: #4a9af2;
+    --minima-site-title-color: #333333;
+    --minima-site-nav-link-color: #111111;
 }
 
 // Dark theme
 [data-theme="dark"] {
-    --background-color: #1a1a1a;
-    --text-color: #ffffff;
-    --link-color: #58a6ff;
-    --border-color: #404040;
-    --code-background: #2d2d2d;
-    --brand-color: #58a6ff;
-    --site-title-color: #ffffff;
-    --site-nav-link-color: #ffffff;
+    --minima-background-color: #1a1a1a;
+    --minima-text-color: #ffffff;
+    --minima-link-base-color: #58a6ff;
+    --minima-border-color-01: #404040;
+    --minima-code-background-color: #2d2d2d;
+    --minima-brand-color: #58a6ff;
+    --minima-brand-color-light: #78b6ff;
+    --minima-site-title-color: #ffffff;
+    --minima-site-nav-link-color: #ffffff;
 }
 
 // Apply theme variables
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--minima-background-color);
+    color: var(--minima-text-color);
 }
 
 a {
-    color: var(--link-color);
+    color: var(--minima-link-base-color);
 }
 
 .site-header {
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--background-color);
+    border-bottom: 1px solid var(--minima-border-color-01);
+    background-color: var(--minima-background-color);
 }
 
 .site-title {
-    color: var(--site-title-color);
+    color: var(--minima-site-title-color);
 }
 
 .site-nav .page-link {
-    color: var(--site-nav-link-color);
+    color: var(--minima-site-nav-link-color);
 }
 
 .post-content {
-    color: var(--text-color);
+    color: var(--minima-text-color);
 }
 
 .toc-wrapper {
-    background-color: var(--background-color);
-    border: 1px solid var(--border-color);
+    background-color: var(--minima-background-color);
+    border: 1px solid var(--minima-border-color-01);
 }
 
 .toc a {
-    color: var(--text-color);
+    color: var(--minima-text-color);
 }
 
 .toc a:hover {
-    color: var(--link-color);
+    color: var(--minima-link-base-color);
 }
 
 .toc a.active {
-    color: var(--brand-color);
+    color: var(--minima-brand-color);
 }
 
 code {
-    background-color: var(--code-background);
+    background-color: var(--minima-code-background-color);
 }
 
 // 主题切换器样式
@@ -79,7 +81,7 @@ code {
 .theme-switch {
     padding: 5px;
     border-radius: 4px;
-    border: 1px solid var(--border-color);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    border: 1px solid var(--minima-border-color-01);
+    background-color: var(--minima-background-color);
+    color: var(--minima-text-color);
 }

@@ -5,8 +5,8 @@
   width: 260px;
   max-height: calc(100vh - 200px);
   overflow-y: auto;
-  background-color: var(--background-color);
-  border: 1px solid var(--border-color-01);
+  background-color: var(--minima-background-color);
+  border: 1px solid var(--minima-border-color-01);
   border-radius: 4px;
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -15,58 +15,24 @@
     h2 {
       font-size: 1.2em;
       margin-bottom: 10px;
-      color: var(--brand-color);
+      color: var(--minima-brand-color);
     }
 
     #table-of-contents {
       a {
         display: block;
         padding: 4px 0;
-        color: var(--text-color);
+        color: var(--minima-text-color);
         text-decoration: none;
         font-size: 0.9em;
         transition: color 0.2s;
 
         &:hover {
-          color: var(--brand-color);
+          color: var(--minima-brand-color);
         }
-.post-header-tags {
-  margin-bottom: 15px;
-  .post-header-tag {
-    display: inline-block;
-    padding: 2px 8px;
-    margin-right: 5px;
-    background-color: var(--background-color);
-    border: 1px solid var(--border-color-01);
-    border-radius: 3px;
-    font-size: 0.9em;
-    color: var(--text-color);
-  }
-}
 
-.post-footer-tags {
-  margin-top: 30px;
-  padding-top: 15px;
-  border-top: 1px solid var(--border-color-01);
-  
-  .post-footer-tag {
-    display: inline-block;
-    padding: 3px 10px;
-    margin-right: 8px;
-    background-color: var(--brand-color);
-    border-radius: 15px;
-    font-size: 0.9em;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    
-    &:hover {
-      background-color: darken(var(--brand-color), 10%);
-    }
-  }
-}
         &.active {
-          color: var(--brand-color);
+          color: var(--minima-brand-color);
           font-weight: bold;
         }
       }
@@ -90,5 +56,41 @@
 
   @media screen and (max-width: 800px) {
     margin-right: 0;
+  }
+}
+
+.post-header-tags {
+  margin-bottom: 15px;
+  .post-header-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-right: 5px;
+    background-color: var(--minima-background-color);
+    border: 1px solid var(--minima-border-color-01);
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: var(--minima-text-color);
+  }
+}
+
+.post-footer-tags {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid var(--minima-border-color-01);
+  
+  .post-footer-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    margin-right: 8px;
+    background-color: var(--minima-brand-color);
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: var(--minima-brand-color-light);
+    }
   }
 }
