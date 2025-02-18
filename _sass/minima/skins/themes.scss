@@ -1,40 +1,28 @@
-// 默认主题（Classic）
-[data-theme="classic"] {
+// Light theme
+[data-theme="light"] {
     --background-color: #ffffff;
     --text-color: #333333;
     --link-color: #2a7ae2;
     --border-color: #e8e8e8;
     --code-background: #f8f8f8;
+    --brand-color: #2a7ae2;
+    --site-title-color: #333333;
+    --site-nav-link-color: #111111;
 }
 
-// 深色主题
+// Dark theme
 [data-theme="dark"] {
     --background-color: #1a1a1a;
     --text-color: #ffffff;
     --link-color: #58a6ff;
     --border-color: #404040;
     --code-background: #2d2d2d;
+    --brand-color: #58a6ff;
+    --site-title-color: #ffffff;
+    --site-nav-link-color: #ffffff;
 }
 
-// Solarized Light
-[data-theme="solarized"] {
-    --background-color: #fdf6e3;
-    --text-color: #657b83;
-    --link-color: #268bd2;
-    --border-color: #eee8d5;
-    --code-background: #eee8d5;
-}
-
-// Solarized Dark
-[data-theme="solarized-dark"] {
-    --background-color: #002b36;
-    --text-color: #839496;
-    --link-color: #268bd2;
-    --border-color: #073642;
-    --code-background: #073642;
-}
-
-// 应用主题变量
+// Apply theme variables
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -46,13 +34,39 @@ a {
 
 .site-header {
     border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
 }
 
-.site-footer {
-    border-top: 1px solid var(--border-color);
+.site-title {
+    color: var(--site-title-color);
 }
 
-pre, code {
+.site-nav .page-link {
+    color: var(--site-nav-link-color);
+}
+
+.post-content {
+    color: var(--text-color);
+}
+
+.toc-wrapper {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+}
+
+.toc a {
+    color: var(--text-color);
+}
+
+.toc a:hover {
+    color: var(--link-color);
+}
+
+.toc a.active {
+    color: var(--brand-color);
+}
+
+code {
     background-color: var(--code-background);
 }
 
