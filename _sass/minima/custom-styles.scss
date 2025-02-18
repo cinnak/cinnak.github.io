@@ -5,10 +5,11 @@
   width: 260px;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
-  background: #fff;
+  background: var(--minima-background-color);
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--minima-box-shadow);
+  border: 1px solid var(--minima-border-color-01);
 
   @media screen and (max-width: 1200px) {
     display: none;
@@ -19,23 +20,24 @@
       font-size: 1.2em;
       margin-bottom: 10px;
       padding-bottom: 5px;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--minima-border-color-01);
+      color: var(--minima-text-color);
     }
 
     a {
       display: block;
       padding: 4px 0;
-      color: #666;
+      color: var(--minima-text-color);
       text-decoration: none;
       font-size: 0.9em;
       transition: all 0.2s ease;
 
       &:hover {
-        color: #000;
+        color: var(--minima-link-base-color);
       }
 
       &.active {
-        color: #2a7ae2;
+        color: var(--minima-brand-color);
         font-weight: 500;
       }
     }
@@ -67,34 +69,6 @@
 
     &:not(:last-child) {
       margin-right: 0;
-    }
-  }
-}
-
-// 主题切换器样式
-.theme-switcher {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 15px;
-
-  select {
-    padding: 5px 10px;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
-    background-color: var(--minima-background-color);
-    color: var(--minima-text-color);
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-
-    &:hover {
-      border-color: var(--minima-brand-color);
-    }
-
-    &:focus {
-      outline: none;
-      border-color: var(--minima-brand-color);
-      box-shadow: 0 0 0 2px rgba(42, 122, 226, 0.2);
     }
   }
 }
