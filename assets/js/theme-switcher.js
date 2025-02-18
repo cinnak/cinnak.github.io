@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const themes = ['classic', 'dark', 'solarized', 'solarized-dark'];
-    let currentTheme = localStorage.getItem('theme') || 'classic';
+    let currentTheme = localStorage.getItem('theme') || 'light';
 
     function setTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentTheme = theme;
     }
 
-    const themeSelect = document.querySelector('#theme-switch');
+    const themeSelect = document.querySelector('#theme-switcher');
     if (themeSelect) {
         // 设置当前主题为选中项
         const currentOption = themeSelect.querySelector(`option[value="${currentTheme}"]`);

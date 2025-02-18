@@ -1,0 +1,35 @@
+// Light theme colors
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #111111;
+  --link-base-color: #2a7ae2;
+  --link-visited-color: #1756a9;
+  --link-hover-color: #111111;
+  --code-background-color: #f8f8f8;
+  --border-color-01: #e8e8e8;
+  --border-color-02: #dbdbdb;
+  --border-color-03: #c9c9c9;
+  --table-text-color: #111111;
+  --table-zebra-color: #f8f8f8;
+  --table-header-bg-color: #f0f0f0;
+  --table-header-border: #dedede;
+  --table-border-color: #e8e8e8;
+}
+
+// Dark theme colors
+[data-theme="dark"] {
+  --background-color: #1a1a1a;
+  --text-color: #e6e6e6;
+  --link-base-color: #79b8ff;
+  --link-visited-color: #5a8fc7;
+  --link-hover-color: #c9d1d9;
+  --code-background-color: #2d2d2d;
+  --border-color-01: #424242;
+  --border-color-02: #4a4a4a;
+  --border-color-03: #525252;
+  --table-text-color: #e6e6e6;
+  --table-zebra-color: #2d2d2d;
+  --table-header-bg-color: #363636;
+  --table-header-border: #424242;
+  --table-border-color: #424242;
+}

@@ -47,15 +47,31 @@ layout: base
     document.addEventListener('DOMContentLoaded', function() {
       const content = document.getElementById('post-content');
       const toc = document.getElementById('table-of-contents');
-      const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      const tocItems = [];
+      
+      if (!content || !toc) {
+        console.warn('Required elements not found');
+        return;
+      }
+      
+      const headings = Array.from(content.querySelectorAll('h2, h3, h4, h5, h6'));
+      if (headings.length === 0) {
+        console.info('No headings found in content');
+        return;
+      }
+
+      // 清空现有目录内容
+      toc.innerHTML = '';
 
       headings.forEach((heading, index) => {
-        const id = `heading-${index}`;
+        // 生成唯一ID
+        const id = heading.id || `heading-${index}`;
         heading.id = id;
+        
+        // 获取标题层级和文本
         const level = parseInt(heading.tagName.charAt(1));
-        const text = heading.textContent;
+        const text = heading.textContent.trim();
 
+        // 创建目录项
         const link = document.createElement('a');
         link.href = `#${id}`;
         link.textContent = text;
@@ -64,44 +80,38 @@ layout: base
         const div = document.createElement('div');
         div.appendChild(link);
         toc.appendChild(div);
-
-        tocItems.push({ link, heading });
       });
 
-      // Highlight current section
+      // 使用Intersection Observer API监听标题元素的可见性
+      const observerOptions = {
+        root: null,
+        rootMargin: '-5% 0px -95% 0px',
+        threshold: 0
+      };
+
+      let currentActive = null;
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           const id = entry.target.id;
-          const tocLink = toc.querySelector(`a[href=\"#${id}\"]`);
+          const tocLink = toc.querySelector(`a[href="#${id}"]`);
+          
           if (entry.isIntersecting) {
-            tocLink?.classList.add('active');
-          } else {
-            tocLink?.classList.remove('active');
+            // 移除之前的active类
+            if (currentActive && currentActive !== tocLink) {
+              currentActive.classList.remove('active');
+            }
+            // 添加active类到当前项
+            if (tocLink) {
+              tocLink.classList.add('active');
+              currentActive = tocLink;
+            }
           }
         });
-      }, { rootMargin: '-10% 0px -90% 0px' });
+      }, observerOptions);
 
       headings.forEach(heading => observer.observe(heading));
     });
   </script>
-
-  <!-- {%- if site.disqus.shortname -%}
-    <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function () {
-            this.page.url = '{{ page.url | absolute_url }}';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-
-        (function() {  // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://cinnak.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  {%- endif -%} -->
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
