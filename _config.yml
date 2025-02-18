@@ -1,26 +1,59 @@
-title: Cinnak
-description: Writing and sharing about data science, AI, cybersecurity, and enjoying some craft beers🍺🍻. Join me for some tech talk and beer chats!
+# 站点设置
+title: Cinnak's Blog
+description: A personal blog about cybersecurity and technology
+name: "Cinnak"
+repository: "cinnak/cinnak.github.io"
 
-markdown: kramdown
-kramdown:
-  input: GFM
+# 主题设置
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "default"
 
-theme: minima
+# 站点配置
+locale: "zh-CN"
+search: true
+atomfeed: true
+
+# SEO相关
+url: "https://cinnak.github.io"
+baseurl: ""
+
+# 作者信息
+author:
+  name: "Cinnak"
+  avatar: ""
+  bio: "Cybersecurity and Technology Enthusiast"
+  location: "China"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cinnak"
+
+# 默认布局设置
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true
+
+# 分页设置
+paginate: 5
+paginate_path: /page:num/
+
+# 插件设置
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
   - jekyll-feed
+  - jekyll-include-cache
   - jekyll-seo-tag
-  - jekyll-toc
-
-minima:
-  date_format: "%b %-d, %Y"
-  skin: classic
-  show_tags: true
-
-show_excerpts: true
-
-header_pages:
-  - about.md
-  - tags.html
 
 # Uncomment and customize the following section if you want to add social links
 # minima:
