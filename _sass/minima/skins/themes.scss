@@ -9,6 +9,7 @@
     --minima-brand-color-light: #4a9af2;
     --minima-site-title-color: #333333;
     --minima-site-nav-link-color: #111111;
+    --minima-date-color: #595959;
 }
 
 // Dark theme
@@ -22,6 +23,7 @@
     --minima-brand-color-light: #78b6ff;
     --minima-site-title-color: #ffffff;
     --minima-site-nav-link-color: #ffffff;
+    --minima-date-color: #cccccc;
 }
 
 // Apply theme variables
@@ -51,6 +53,10 @@ a {
     color: var(--minima-text-color);
 }
 
+.post-meta {
+    color: var(--minima-date-color);
+}
+
 .toc-wrapper {
     background-color: var(--minima-background-color);
     border: 1px solid var(--minima-border-color-01);
@@ -73,15 +79,16 @@ code {
 }
 
 // 主题切换器样式
-.theme-switch-wrapper {
+.theme-switcher {
     margin-left: 15px;
     display: inline-block;
-}
-
-.theme-switch {
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid var(--minima-border-color-01);
-    background-color: var(--minima-background-color);
-    color: var(--minima-text-color);
+    
+    select {
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid var(--minima-border-color-01);
+        background-color: var(--minima-background-color);
+        color: var(--minima-text-color);
+        cursor: pointer;
+    }
 }
