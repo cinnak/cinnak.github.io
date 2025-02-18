@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function createThemeSwitcher() {
-        const nav = document.querySelector('.site-nav .trigger');
+        const nav = document.querySelector('.site-nav');
         if (!nav) return;
 
         const themeContainer = document.createElement('div');
@@ -40,4 +40,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化主题
     setTheme(currentTheme);
     createThemeSwitcher();
-}));
+});
