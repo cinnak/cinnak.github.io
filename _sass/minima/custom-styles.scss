@@ -1,2 +1,58 @@
-// Placeholder to allow defining custom styles that override everything else.
-// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+.toc-wrapper {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  width: 260px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  .toc {
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #eee;
+    }
+
+    a {
+      display: block;
+      padding: 4px 0;
+      color: #666;
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: #000;
+      }
+
+      &.active {
+        color: #2a7ae2;
+        font-weight: 500;
+      }
+    }
+
+    .toc-level-1 { margin-left: 0; }
+    .toc-level-2 { margin-left: 10px; }
+    .toc-level-3 { margin-left: 20px; }
+    .toc-level-4 { margin-left: 30px; }
+    .toc-level-5 { margin-left: 40px; }
+    .toc-level-6 { margin-left: 50px; }
+  }
+}
+
+.post-content {
+  max-width: calc(100% - 300px);
+  
+  @media screen and (max-width: 1200px) {
+    max-width: 100%;
+  }
+}

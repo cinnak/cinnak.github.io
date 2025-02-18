@@ -22,7 +22,7 @@ My goal was to integrate CISSP prep into my daily routine, even if it was just f
 
 - ISC2 Official Study Guide (OSG) v8 Simplified Chinese Version - To ensure I clearly understand the Chinese translations of key terms.
 
-- How think like a manager for the CISSP exam by Luke Ahmed
+- How to think like a manager for the CISSP exam by Luke Ahmed
 
 ### Videos:
 

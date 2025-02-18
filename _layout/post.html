@@ -2,6 +2,12 @@
 layout: base
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="toc-wrapper">
+    <div class="toc">
+      <h2>目录</h2>
+      <div id="table-of-contents"></div>
+    </div>
+  </div>
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
@@ -33,9 +39,51 @@ layout: base
       {%- endif -%}</p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-content e-content" itemprop="articleBody" id="post-content">
     {{ content }}
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const content = document.getElementById('post-content');
+      const toc = document.getElementById('table-of-contents');
+      const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      const tocItems = [];
+
+      headings.forEach((heading, index) => {
+        const id = `heading-${index}`;
+        heading.id = id;
+        const level = parseInt(heading.tagName.charAt(1));
+        const text = heading.textContent;
+
+        const link = document.createElement('a');
+        link.href = `#${id}`;
+        link.textContent = text;
+        link.classList.add(`toc-level-${level}`);
+
+        const div = document.createElement('div');
+        div.appendChild(link);
+        toc.appendChild(div);
+
+        tocItems.push({ link, heading });
+      });
+
+      // Highlight current section
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const id = entry.target.id;
+          const tocLink = toc.querySelector(`a[href=\"#${id}\"]`);
+          if (entry.isIntersecting) {
+            tocLink?.classList.add('active');
+          } else {
+            tocLink?.classList.remove('active');
+          }
+        });
+      }, { rootMargin: '-10% 0px -90% 0px' });
+
+      headings.forEach(heading => observer.observe(heading));
+    });
+  </script>
 
   <!-- {%- if site.disqus.shortname -%}
     <div id="disqus_thread"></div>
@@ -58,10 +106,6 @@ layout: base
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
-<div class="post-content e-content" itemprop="articleBody">
-  {{ content }}
-</div>
-
 {%- if page.tags -%}
   <div class="post-tags">
     <p><strong>标签:</strong>
@@ -75,4 +119,3 @@ layout: base
     </p>
   </div>
 {%- endif -%}
-{% endif %}
