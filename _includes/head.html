@@ -11,4 +11,19 @@
 
   {%- include custom-head.html -%}
   
+  <!-- Theme Switcher -->
+  <script src="{{ "/assets/js/theme-switcher.js" | relative_url }}"></script>
+  <style>
+    .theme-switcher {
+      display: inline-block;
+      margin-left: 15px;
+    }
+    .theme-switcher select {
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      color: #333;
+    }
+  </style>
 </head>

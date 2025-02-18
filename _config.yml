@@ -1,12 +1,12 @@
 # 站点设置
 title: Cinnak's Blog
-description: A personal blog about cybersecurity and technology
+description: Writing and sharing about data science, AI, cybersecurity, and enjoying some craft beers🍻. Join me for some tech talk and beer chats!
 name: "Cinnak"
 repository: "cinnak/cinnak.github.io"
 
 # 主题设置
-theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "default"
+theme: minima
+minima_skin: "classic"
 
 # 站点配置
 locale: "zh-CN"
@@ -22,7 +22,7 @@ author:
   name: "Cinnak"
   avatar: ""
   bio: "Cybersecurity and Technology Enthusiast"
-  location: "China"
+  location: "Earth,Solar System, Local Interstellar Cloud,Local Bubble,Gould Belt,Orion Arm,Milky Way Galaxy,Local Group,Virgo Supercluster,Universe."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
