@@ -1,94 +1,147 @@
 // Light theme
 [data-theme="light"] {
     --minima-background-color: #ffffff;
-    --minima-text-color: #333333;
-    --minima-link-base-color: #2a7ae2;
-    --minima-border-color-01: #e8e8e8;
-    --minima-code-background-color: #f8f8f8;
-    --minima-brand-color: #2a7ae2;
-    --minima-brand-color-light: #4a9af2;
-    --minima-site-title-color: #333333;
-    --minima-site-nav-link-color: #111111;
-    --minima-date-color: #595959;
+    --minima-text-color: #2c3e50;
+    --minima-link-base-color: #3498db;
+    --minima-border-color-01: #ecf0f1;
+    --minima-code-background-color: #f7f9fa;
+    --minima-brand-color: #3498db;
+    --minima-brand-color-light: #5dade2;
+    --minima-site-title-color: #2c3e50;
+    --minima-site-nav-link-color: #34495e;
+    --minima-date-color: #7f8c8d;
+    --minima-hover-color: #2980b9;
+    --minima-box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 // Dark theme
 [data-theme="dark"] {
-    --minima-background-color: #1a1a1a;
-    --minima-text-color: #ffffff;
-    --minima-link-base-color: #58a6ff;
-    --minima-border-color-01: #404040;
-    --minima-code-background-color: #2d2d2d;
-    --minima-brand-color: #58a6ff;
-    --minima-brand-color-light: #78b6ff;
+    --minima-background-color: #1a1f2c;
+    --minima-text-color: #e0e0e0;
+    --minima-link-base-color: #61afef;
+    --minima-border-color-01: #2c313c;
+    --minima-code-background-color: #282c34;
+    --minima-brand-color: #61afef;
+    --minima-brand-color-light: #88c0f7;
     --minima-site-title-color: #ffffff;
-    --minima-site-nav-link-color: #ffffff;
-    --minima-date-color: #cccccc;
+    --minima-site-nav-link-color: #e0e0e0;
+    --minima-date-color: #abb2bf;
+    --minima-hover-color: #88c0f7;
+    --minima-box-shadow: rgba(0, 0, 0, 0.2);
 }
 
 // Apply theme variables
 body {
     background-color: var(--minima-background-color);
     color: var(--minima-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
     color: var(--minima-link-base-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: var(--minima-hover-color);
+    }
 }
 
 .site-header {
     border-bottom: 1px solid var(--minima-border-color-01);
     background-color: var(--minima-background-color);
+    box-shadow: 0 2px 4px var(--minima-box-shadow);
+    transition: all 0.3s ease;
+    padding: 15px 0;
 }
 
 .site-title {
     color: var(--minima-site-title-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: var(--minima-brand-color);
+        text-decoration: none;
+    }
 }
 
 .site-nav .page-link {
     color: var(--minima-site-nav-link-color);
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: var(--minima-brand-color);
+    }
 }
 
 .post-content {
     color: var(--minima-text-color);
+    line-height: 1.8;
 }
 
 .post-meta {
     color: var(--minima-date-color);
+    font-size: 0.9em;
 }
 
 .toc-wrapper {
     background-color: var(--minima-background-color);
     border: 1px solid var(--minima-border-color-01);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--minima-box-shadow);
+    padding: 15px;
+    margin: 20px 0;
+    transition: box-shadow 0.3s ease;
+    
+    &:hover {
+        box-shadow: 0 4px 12px var(--minima-box-shadow);
+    }
 }
 
 .toc a {
     color: var(--minima-text-color);
-}
-
-.toc a:hover {
-    color: var(--minima-link-base-color);
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: var(--minima-link-base-color);
+    }
 }
 
 .toc a.active {
     color: var(--minima-brand-color);
+    font-weight: 600;
 }
 
 code {
     background-color: var(--minima-code-background-color);
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
 }
 
-// 主题切换器样式
 .theme-switcher {
     margin-left: 15px;
     display: inline-block;
     
     select {
-        padding: 5px;
+        padding: 5px 10px;
         border-radius: 4px;
         border: 1px solid var(--minima-border-color-01);
         background-color: var(--minima-background-color);
         color: var(--minima-text-color);
         cursor: pointer;
+        transition: all 0.2s ease;
+        
+        &:hover {
+            border-color: var(--minima-brand-color);
+        }
+        
+        &:focus {
+            outline: none;
+            border-color: var(--minima-brand-color);
+            box-shadow: 0 0 0 2px var(--minima-brand-color-light);
+        }
     }
 }

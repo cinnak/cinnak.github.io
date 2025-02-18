@@ -1,35 +1,31 @@
 ---
 layout: page
 title: Tags
-permalink: /tags/
+permanifest: /tags/
 ---
 
 <div class="tags-page">
-  {% assign tags = site.tags | sort %}
+  {% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
   <div class="tag-cloud">
-    {% for tag in tags %}
-      {% assign t = tag | first %}
-      {% assign posts = tag | last %}
-      <a href="#{{ t | downcase | replace:' ','-' }}" class="tag-link">
-        {{ t }} <span class="tag-count">({{ posts.size }})</span>
+    {% for tag in all_tags %}
+      {% assign posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+      <a href="#{{ tag | downcase | replace:' ','-' }}" class="tag-link">
+        {{ tag }} <span class="tag-count">({{ posts.size }})</span>
       </a>
     {% endfor %}
   </div>
 
   <div class="tag-list">
-    {% for tag in tags %}
-      {% assign t = tag | first %}
-      {% assign posts = tag | last %}
+    {% for tag in all_tags %}
+      {% assign posts = site.posts | where_exp: "post", "post.tags contains tag" %}
       <div class="tag-section">
-        <h3 id="{{ t | downcase | replace:' ','-' }}" class="tag-title">{{ t }} <span class="tag-count">({{ posts.size }})</span></h3>
+        <h3 id="{{ tag | downcase | replace:' ','-' }}" class="tag-title">{{ tag }} <span class="tag-count">({{ posts.size }})</span></h3>
         <ul class="post-list">
           {% for post in posts %}
-            {% if post.tags contains t %}
-              <li class="post-item">
-                <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
-                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-              </li>
-            {% endif %}
+            <li class="post-item">
+              <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
+              <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            </li>
           {% endfor %}
         </ul>
       </div>
